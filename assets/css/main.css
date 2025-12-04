@@ -2310,6 +2310,10 @@ input, select, textarea {
 			color: #8cc9f0;
 		}
 
+		.icon.style6 {
+			color: #8ce1df;
+		}
+
 		@media screen and (max-width: 1680px) {
 
 			.icon.major:before {
@@ -2903,6 +2907,10 @@ input, select, textarea {
 				background-color: #8cc9f0;
 			}
 
+			.statistics li.style6 {
+				background-color: #8ce1df;
+			}
+
 			.statistics li strong, .statistics li b {
 				display: block;
 				font-size: 2em;
@@ -2998,17 +3006,26 @@ input, select, textarea {
 			}
 
 		.spotlight .image {
-			display: inline-block;
-			margin-left: 4em;
-			padding: 0.65em;
-			border-radius: 100%;
-			border: solid 1px;
+    		display: inline-block;
+    		margin-left: 4em;
+
+    		width: 220px;               /* circle size */
+    		height: 220px;              /* must match width */
+
+    		border-radius: 50%;
+    		overflow: hidden;           /* THIS clips the image into the circle */
+
+    		border: solid 1px #ccc;
+    		padding: 0; 
 		}
 
 			.spotlight .image img {
-				display: block;
-				border-radius: 100%;
-				width: 16em;
+    			width: 110%;
+    			height: 110%;
+    			object-fit: cover;          /* prevents squishing/stretching */
+    			display: block;
+				margin-left: -10%;
+				margin-top: -5%;
 			}
 
 		@media screen and (max-width: 980px) {
@@ -3119,9 +3136,13 @@ input, select, textarea {
 			}
 
 				#header.alt .logo img {
+					width: 120px;
+					height: 120px;
+					object-fit: cover;
+					border-radius: 50%;
 					display: block;
 					margin: 0 auto;
-					max-width: 75%;
+					max-width: none;
 				}
 
 		@media screen and (max-width: 1280px) {
